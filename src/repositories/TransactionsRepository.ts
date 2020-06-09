@@ -59,7 +59,6 @@ class TransactionsRepository {
 
   public create({ title, type, value }: CreateTransactionDTO): Transaction {
     const transaction = new Transaction({ title, type, value });
-    const balance = this.getBalance();
     this.transactions.push(transaction);
     return transaction;
   }
